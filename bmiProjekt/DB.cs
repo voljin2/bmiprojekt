@@ -13,7 +13,7 @@ namespace bmiProjekt
     {
         static public string InsertBmi(BmiCal bmi)
         {
-            string message = "Weight and Hight saved without problems";
+            string message = "Weight and Height saved without problems";
             
             try
             {
@@ -32,7 +32,7 @@ namespace bmiProjekt
             catch (Exception)
             {
 
-                return "Error, Weight and Hight not saved";
+                return "Error, Weight and Height not saved";
             }
 
             

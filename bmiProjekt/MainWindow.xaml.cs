@@ -30,8 +30,8 @@ namespace bmiProjekt
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             BmiCal BMI = new BmiCal(int.Parse(WightBox.Text), int.Parse(HightBox.Text));
-            InfoBox.Text += BMI.BmiCalculator(BMI, ref InfoBox);
-            
+            InfoBox.Text = BMI.BmiCalculator(BMI).ToString();
+            InfoBox1.Text = DB.InsertBmi(BMI);            
         }
     }
 }
