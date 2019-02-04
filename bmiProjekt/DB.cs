@@ -29,7 +29,7 @@ namespace bmiProjekt
                 return message;
 
             }
-            catch (Exception)
+            catch (Exception khf)
             {
 
                 return "Error, Weight and Hight not saved";
