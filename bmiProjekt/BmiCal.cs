@@ -17,9 +17,13 @@ namespace bmiProjekt
             this.height = height;
         }
 
-        public void BmiCalculator(BmiCal bmi)
+        public double BmiCalculator(BmiCal bmi)
         {
-            
+            string message = DB.InsertBmi(bmi);
+
+            double BMI = bmi.weight / (bmi.height * bmi.height);
+
+            return BMI;
         }
     }
 }
