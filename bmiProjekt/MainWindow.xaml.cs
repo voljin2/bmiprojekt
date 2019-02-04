@@ -23,6 +23,15 @@ namespace bmiProjekt
         public MainWindow()
         {
             InitializeComponent();
+
+            
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            BmiCal BMI = new BmiCal(int.Parse(WightBox.Text), int.Parse(HightBox.Text));
+            InfoBox.Text += BMI.BmiCalculator(BMI, ref InfoBox);
+            
         }
     }
 }

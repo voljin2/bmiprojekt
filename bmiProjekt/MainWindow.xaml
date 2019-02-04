@@ -5,8 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:bmiProjekt"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="1000">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="461*"/>
+            <ColumnDefinition Width="328*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="150*"/>
+        </Grid.RowDefinitions>
+        <Button Content="BMI Result" HorizontalAlignment="Left" Margin="220.8,92,0,0" VerticalAlignment="Top" Width="97" Height="38" Grid.Row="4" Grid.Column="2" Click="Button_Click"/>
+        <Label Content="Hight" HorizontalAlignment="Left" Margin="0,31,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="53" Width="395"/>
+        <Label Content="wieght" Grid.Column="1" HorizontalAlignment="Left" Margin="0.6,27.2,0,0" Grid.Row="2" VerticalAlignment="Top" Height="66" Grid.RowSpan="2" Width="393"/>
+        <TextBox Name="HightBox" HorizontalAlignment="Left" Height="47" Margin="0,0.4,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="385" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <TextBox Name="WightBox" HorizontalAlignment="Left" Height="46" Margin="0,0.4,0,0" Grid.Row="3" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="395" Grid.ColumnSpan="2"/>
+        <TextBox Name="InfoBox" HorizontalAlignment="Left" Height="46" Margin="0,0.4,0,0" Grid.Row="3" Grid.Column="2" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="395" Grid.ColumnSpan="1"/>
+
     </Grid>
 </Window>
