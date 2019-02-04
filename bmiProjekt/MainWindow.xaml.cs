@@ -20,6 +20,7 @@ namespace bmiProjekt
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         public MainWindow()
         {
             InitializeComponent();
@@ -29,9 +30,11 @@ namespace bmiProjekt
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+
+            string message = "";
             BmiCal BMI = new BmiCal(int.Parse(WightBox.Text), int.Parse(HightBox.Text));
-            InfoBox.Text += BMI.BmiCalculator(BMI, ref InfoBox);
-            
+            InfoBox.Text += BMI.BmiCalculator(BMI, ref message);
+            InfoBox.Text += message;
         }
     }
 }

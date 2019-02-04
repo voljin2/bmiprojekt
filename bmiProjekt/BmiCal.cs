@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 
 namespace bmiProjekt
 {
-    class BmiCal
+  public class BmiCal
     {
         int weight;
         int height;
@@ -25,10 +25,13 @@ namespace bmiProjekt
             this.weight = weight;
             this.height = height;
         }
+        public BmiCal()
+        {           
+        }
 
-        public double BmiCalculator(BmiCal bmi, ref TextBox infobox)
+        public double BmiCalculator(BmiCal bmi, ref string infobox)
         {
-            infobox.Text += DB.InsertBmi(bmi);
+            infobox = DB.InsertBmi(bmi);
             int witght = bmi.weight;
             int hight = bmi.height;
 
