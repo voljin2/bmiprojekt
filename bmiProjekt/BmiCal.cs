@@ -3,6 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
 
 namespace bmiProjekt
 {
@@ -17,13 +26,16 @@ namespace bmiProjekt
             this.height = height;
         }
 
-        public double BmiCalculator(BmiCal bmi)
+        public double BmiCalculator(BmiCal bmi, ref TextBox infobox)
         {
-            string message = DB.InsertBmi(bmi);
+            infobox.Text += DB.InsertBmi(bmi);
+            int witght = bmi.weight;
+            int hight = bmi.height;
 
-            double BMI = bmi.weight / (bmi.height * bmi.height);
+            double bMI = 0;
+            bMI = ((hight * hight)/ witght);
 
-            return BMI;
+            return bMI;
         }
     }
 }

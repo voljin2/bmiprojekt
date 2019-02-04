@@ -13,8 +13,8 @@ namespace bmiProjekt
     {
         static public string InsertBmi(BmiCal bmi)
         {
-            string message = "no Errors";
-
+            string message = "Weight and Hight saved without problems";
+            
             try
             {
 
